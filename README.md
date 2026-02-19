@@ -1,13 +1,13 @@
 # EXPERIMENT-01-INTERFACING-A-DIGITAL-OUTPUT-TO-IOT-DEVELOPMENT-BOARD
 
 
-**DATE:**
+**DATE:02.02.2026**
 
-**NAME:**
+**NAME:MADHAVAN K**
 
-**ROLL NO:**
+**ROLL NO:212224220054**
 
-**DEPARTMENT:**
+**DEPARTMENT:IT**
 
 ## Aim
 
@@ -99,10 +99,76 @@ With its power-efficient design, built-in LoRaWAN support, and flexible communic
 ## STM 32 CUBE PROGRAM
 
 ```
-// Your STM 32 CUBE Program code here
+1A
+
+
+
+#include "main.h"
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+ 
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+ 
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_SET);
+	  HAL_Delay(5000);
+	  HAL_GPIO_WritePin(GPIOA,GPIO_PIN_0,GPIO_PIN_RESET);
+	  HAL_Delay(5000);
+
+
+  }
+}
 ```
 
 ## OUTPUT
+![WhatsApp Image 2026-02-09 at 11 03 08](https://github.com/user-attachments/assets/0e8e9a7b-60c4-47eb-bf3c-8831d2454e3b)
+
+![WhatsApp Image 2026-02-09 at 11 03 08 (1)](https://github.com/user-attachments/assets/38ca9919-2816-4ce8-b70f-2af17d11c53d)
+
+## STM 32 CUBE PROGRAM
+```
+
+1B
+
+
+#include "main.h"
+
+void SystemClock_Config(void);
+static void MX_GPIO_Init(void);
+
+int main(void)
+{
+ 
+  HAL_Init();
+
+  SystemClock_Config();
+
+  MX_GPIO_Init();
+ 
+  while (1)
+  {
+	  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
+	  HAL_Delay(5000);
+	  HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_RESET);
+	  HAL_Delay(5000);
+
+
+  }
+}
+```
+## OUTPUT
+![WhatsApp Image 2026-02-09 at 11 03 08 (2)](https://github.com/user-attachments/assets/7d18c14a-ca42-433b-9d93-dc4e6d52566e)
+
+![WhatsApp Image 2026-02-09 at 11 03 09](https://github.com/user-attachments/assets/8ae9cebc-1fe8-4d89-9c7e-5a878d930411)
 
 ## Result
 
